@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Validator</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expression Validator</h1>
+        <form id="validationForm" onsubmit="return validateExpression()">
+            <label for="expressionType">Choose an expression type:</label>
+            <select id="expressionType" name="expressionType" onchange="updatePlaceholder()">
+                <option value="email">Email</option>
+                <option value="phone">Phone Number</option>
+                <option value="postcode">Post Code</option>
+            </select>
+            <br>
+            <input type="text" id="expressionInput" placeholder="Enter expression">
+            <br>
+            <button type="submit">Validate</button>
+        </form>
+        <p id="result"></p>
+        <p id="codeLink">
+            <a href="https://github.com/yourgithubrepo">View the code on GitHub</a>
+        </p>
+    </div>
+    <script src="Js/script.js"></script>
+</body>
+</html>
